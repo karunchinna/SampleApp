@@ -12,7 +12,7 @@ EXPOSE 8080
 ARG JAR_FILE=target/SpringBootSampleApp-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} SpringBootSampleApp.jar
+COPY ${JAR_FILE} SpringBootSampleApp.jar
 
 # Run the jar file 
 ENTRYPOINT ["java","-jar","/SpringBootSampleApp.jar"]
